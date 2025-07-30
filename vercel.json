@@ -2,9 +2,6 @@
     "version": 2,
     "name": "co2eq-calculator",
     "public": true,
-    "github": {
-        "silent": true
-    },
     "headers": [
         {
             "source": "/(.*)",
@@ -30,10 +27,5 @@
             "destination": "/",
             "permanent": true
         }
-    ],
-    "functions": {
-        "app/**/*": {
-            "maxDuration": 10
-        }
-    }
+    ]
 }
