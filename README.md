@@ -8,12 +8,14 @@ Uma ferramenta web gratuita para calcular emissões de CO2 equivalente a partir 
 
 - ✅ **Acesso livre** - Sem necessidade de login ou cadastro
 - ✅ **10 tipos de resíduos** com fatores de emissão baseados em dados científicos
+- ✅ **Cálculo de energia economizada** - Mostra kWh poupados com reciclagem
 - ✅ **Múltiplas unidades** (kg, toneladas, litros, unidades)
-- ✅ **Gráfico de pizza interativo** com distribuição visual
+- ✅ **Layout moderno** com gráfico e cards de resumo
 - ✅ **Upload de logo** da empresa
 - ✅ **Geração de relatórios** profissionais em PDF
 - ✅ **Interface responsiva** para desktop e mobile
 - ✅ **Referências bibliográficas** completas
+- ✅ **Deploy otimizado** para Vercel
 - ✅ **Contato WhatsApp** para sugestões e atualizações
 
 ## 🗂️ Como Usar
@@ -32,18 +34,21 @@ Uma ferramenta web gratuita para calcular emissões de CO2 equivalente a partir 
 
 ## 📊 Tipos de Resíduos Suportados
 
-| Tipo | Fator de Emissão | Unidade |
-|------|------------------|---------|
-| Papel/Papelão | 0.9 kg CO2e/kg | kg, ton |
-| Plástico | 3.1 kg CO2e/kg | kg, ton |
-| Vidro | 0.7 kg CO2e/kg | kg, ton |
-| Metal/Alumínio | 1.8 kg CO2e/kg | kg, ton |
-| Resíduo Orgânico | 0.5 kg CO2e/kg | kg, ton |
-| Resíduo Eletrônico | 12.0 kg CO2e/kg | kg, ton |
-| Têxtil | 5.9 kg CO2e/kg | kg, ton |
-| Madeira | 0.4 kg CO2e/kg | kg, ton |
-| Óleo de Cozinha | 2.5 kg CO2e/L | litros |
-| Baterias | 8.7 kg CO2e/unidade | unidades |
+| Tipo | Fator CO2e | Energia Economizada | Unidade |
+|------|------------|---------------------|---------|
+| Papel/Papelão | 0.9 kg CO2e/kg | 2.8 kWh/kg | kg, ton |
+| Plástico | 3.1 kg CO2e/kg | 5.5 kWh/kg | kg, ton |
+| Vidro | 0.7 kg CO2e/kg | 0.6 kWh/kg | kg, ton |
+| Metal/Alumínio | 1.8 kg CO2e/kg | 15.2 kWh/kg | kg, ton |
+| Resíduo Orgânico | 0.5 kg CO2e/kg | 0.3 kWh/kg | kg, ton |
+| Resíduo Eletrônico | 12.0 kg CO2e/kg | 45.0 kWh/kg | kg, ton |
+| Têxtil | 5.9 kg CO2e/kg | 8.1 kWh/kg | kg, ton |
+| Madeira | 0.4 kg CO2e/kg | 1.2 kWh/kg | kg, ton |
+| Óleo de Cozinha | 2.5 kg CO2e/L | 3.8 kWh/L | litros |
+| Baterias | 8.7 kg CO2e/unidade | 32.5 kWh/unidade | unidades |
+
+### ⚡ Energia Economizada
+A energia economizada representa a redução no consumo elétrico necessário para produção de materiais virgens comparado à reciclagem. Os valores são baseados em estudos de Life Cycle Assessment (LCA) e representam a economia energética real da reciclagem versus produção nova.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -111,6 +116,23 @@ python -m http.server 8080
 # ou
 npx serve . -p 8080
 ```
+
+### Deploy no Vercel
+```bash
+# Instale o Vercel CLI
+npm i -g vercel
+
+# Faça login
+vercel login
+
+# Deploy
+vercel
+
+# Deploy em produção
+vercel --prod
+```
+
+**Arquivo `vercel.json` incluído** com configurações de segurança e otimização.
 
 ### Estrutura do Projeto
 ```

@@ -7,7 +7,9 @@
     "dev": "live-server --port=3000",
     "build": "echo 'Static site - no build needed'",
     "start": "echo 'Static site ready'",
-    "preview": "live-server --port=3000"
+    "preview": "live-server --port=3000",
+    "vercel": "vercel",
+    "vercel:prod": "vercel --prod"
   },
   "keywords": [
     "carbon-footprint",

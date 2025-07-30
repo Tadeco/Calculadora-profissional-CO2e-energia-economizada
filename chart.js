@@ -12,7 +12,7 @@ function updateChart() {
     // Configurações do gráfico
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
-    const radius = Math.min(centerX, centerY) - 60;
+    const radius = Math.min(centerX, centerY) - 80;
 
     // Cores para cada tipo de resíduo
     const colors = [
